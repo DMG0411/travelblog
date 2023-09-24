@@ -1,0 +1,139 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; 
+}
+
+body {
+    background-image: url('../images/travel.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 999;
+    margin-bottom: 10%;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin-right: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.search-bar {
+    position: fixed;
+    top:5%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #F0FFFF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 998;
+    padding: 10px;
+    text-align: center;
+}
+
+#searchInput {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.container {
+    max-width: 600px;
+    margin: 70px auto 20px auto; /* Margin top pentru a evita suprapunerea cu bara de căutare */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container > * {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.card {
+    position: relative;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card p {
+    margin-top: 10px;
+}
+
+.btn-container {
+    display: flex;
+    float:right;
+    justify-content: flex-end;
+    margin-top: 10px; 
+}
+
+.btn-edit{
+        background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.btn-delete {
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.welcome-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 36px;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
