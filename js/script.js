@@ -72,8 +72,8 @@ function searchKeyword() {
     const keyword = document.getElementById('searchInput').value.trim();
     const postsContainer = document.getElementById('postsContainer');
 
-    // Faceți o cerere de tip GET către get.php pentru a obține datele din PHP
-    fetch('get.php')
+    // Faceți o cerere de tip GET către get_post.php pentru a obține datele din PHP
+    fetch('get_post.php', {method: 'GET'})
         .then(response => {
             if (!response.ok) {
                 throw new Error('Invalid HTTP response');
@@ -96,7 +96,7 @@ function searchKeyword() {
                 const card = document.createElement('div');
                 card.classList.add('card');
                 card.innerHTML = `
-                    <img src="${item.photo}" >
+                    <img src=${item.photo ? "data:image;base64," : ""} ${item.photo} >
                     <p>${item.description}</p>
                     <div class="btn-container">
                         <button class="btn-edit" onclick="showEditForm(this)">Edit</button>

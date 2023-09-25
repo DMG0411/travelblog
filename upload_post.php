@@ -11,7 +11,8 @@ if ($conn->connect_error) {
 }
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    $x = $_POST['photo'];
+    $photoFile = $_FILES['photo']['tmp_name'];
+    $x = file_get_contents($photoFile);
     $y = $_POST['description'];
     
     $sql = "INSERT INTO posts (photo, description) VALUES (?, ?)";
@@ -24,6 +25,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 }
 
-$sql = 'SELECT photo, description FROM posts';
-$result = $conn->query($sql);
+// $sql = 'SELECT photo, description FROM posts';
+// $result = $conn->query($sql);
 ?>
