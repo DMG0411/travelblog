@@ -68,7 +68,7 @@ body {
 
 .container {
     max-width: 600px;
-    margin: 70px auto 20px auto; /* Margin top pentru a evita suprapunerea cu bara de căutare */
+    margin: 150px auto 20px auto; /* Margin top pentru a evita suprapunerea cu bara de căutare */
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;

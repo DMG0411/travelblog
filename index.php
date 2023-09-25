@@ -54,7 +54,7 @@
                                 if (!empty($row["photo"])) {
                                     echo '<img src="data:image;base64,' . base64_encode($row['photo']) . '" style="width: auto; height:auto;">';
                                 } else {
-                                    echo "<h3> There is no image to show!</h3>";
+                                    echo "";
                                 }
                                 echo '<p>' . $row["description"] . '</p>';         
                         ?>

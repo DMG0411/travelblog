@@ -85,18 +85,16 @@ function searchKeyword() {
             return response.json();
         })
         .then(data => {
-            // Curăță containerul
             postsContainer.innerHTML = "";
 
-            // Filtrarea datelor în funcție de cuvântul cheie
+
             const filteredData = data.filter(item => item.description.toLowerCase().includes(keyword));
 
-            // Afișarea datelor filtrate
             filteredData.forEach(item => {
                 const card = document.createElement('div');
                 card.classList.add('card');
                 card.innerHTML = `
-                    <img src=${item.photo ? "data:image;base64," : ""} ${item.photo} >
+                    <img src='${item.photo ? "data:image;base64," : ""} ${item.photo}' >
                     <p>${item.description}</p>
                     <div class="btn-container">
                         <button class="btn-edit" onclick="showEditForm(this)">Edit</button>
