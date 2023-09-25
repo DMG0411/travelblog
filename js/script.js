@@ -72,7 +72,6 @@ function searchKeyword() {
     const keyword = document.getElementById('searchInput').value.trim();
     const postsContainer = document.getElementById('postsContainer');
 
-    // Faceți o cerere de tip GET către get_post.php pentru a obține datele din PHP
     fetch('get_post.php', {method: 'GET'})
         .then(response => {
             if (!response.ok) {
