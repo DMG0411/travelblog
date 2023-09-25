@@ -17,6 +17,7 @@ $posts = array();
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
+        $row['photo'] = base64_encode($row['photo']);
         $posts[] = $row;
     }
 }

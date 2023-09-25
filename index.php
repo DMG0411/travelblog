@@ -20,7 +20,7 @@
     <div class="container">
         <div class="postForm">
             <h3>Add a post<br>
-            <form id="postForm" action="upload.php" method="POST">
+            <form enctype="multipart/form-data" id="postForm" action="upload_post.php" method="POST">
                 <h5>Choose a photo to upload:
                 <input type="file" id="photo" name="photo"><br>
                 <h5>Write your thoughts:
