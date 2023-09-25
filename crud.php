@@ -21,8 +21,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     if ($stmt->execute()) {
         header("Refresh:0, url=index.php");
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
     }
 }
 

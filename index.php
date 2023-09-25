@@ -51,12 +51,12 @@
                     if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
                             echo '<div class="card">';
-                            if (!empty($row["photo"])) {
-                                echo '<img src="data:image;base64,' . base64_encode($row['photo']) . '" style="width: auto; height:auto;">';
-                            } else {
-                                echo "<h3> There is no image to show!</h3>";
-                            }
-                            echo '<p>' . $row["description"] . '</p>';
+                                if (!empty($row["photo"])) {
+                                    echo '<img src="data:image;base64,' . base64_encode($row['photo']) . '" style="width: auto; height:auto;">';
+                                } else {
+                                    echo "<h3> There is no image to show!</h3>";
+                                }
+                                echo '<p>' . $row["description"] . '</p>';         
                         ?>
                             <div class="btn-container">
                                 <button class="btn-edit" onclick="showEditForm(this)">Edit</button>
