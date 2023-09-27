@@ -7,12 +7,12 @@
     <title>WikiTravel</title>
 </head>
 <body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="index.php">Blog</a></li>
-        </ul>
-    </nav>
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="index.php">Blog</a></li>
+            </ul>
+        </nav>
     <div class="search-bar">
         <input type="text" id="searchInput" placeholder="Search...">
         <button id="searchButton" onclick="searchKeyword();">Search</button>
