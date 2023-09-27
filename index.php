@@ -24,7 +24,8 @@
                 <h5>Choose a photo to upload:
                 <input type="file" id="photo" name="photo"><br>
                 <h5>Write your thoughts:
-                <input type="text" id="description" name="description"><br>
+                <textarea id="description" name="description" placeholder="Write here..."></textarea>
+                <br>
                 <input type="submit" class="button" value="Post">
             </form>
         </div>
@@ -35,12 +36,33 @@
                 $username = "root";
                 $password = "";
                 $dbname = "travelblog";
-
-                $conn = new mysqli($servername, $username, $password, $dbname);
-
+                
+                $conn = new mysqli($servername, $username, $password);
+                
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 }
+                
+                if ($conn->query("CREATE DATABASE IF NOT EXISTS $dbname") === TRUE) {
+                   // echo "Database created successfully or already exists.";
+                } else {
+                    echo "Error creating database: " . $conn->error;
+                }
+                
+                $conn->select_db($dbname);
+                
+                $createTableSQL = "CREATE TABLE IF NOT EXISTS posts (
+                    id INT AUTO_INCREMENT PRIMARY KEY,
+                    photo LONGBLOB,
+                    description TEXT
+                )";
+                
+                if ($conn->query($createTableSQL) === TRUE) {
+                    //echo "Table created successfully or already exists.";
+                } else {
+                    echo "Error creating table: " . $conn->error;
+                }
+                ////////////////////
 
                 $sql = "SELECT * FROM posts";
                 $result = $conn->query($sql);
